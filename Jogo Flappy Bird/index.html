@@ -1,34 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-b">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Mini curso - Construindo seu jogo em JavaScript</title>
+    <title>Flappy Bird</title>
     <link rel="stylesheet" href="css/flappy.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body class="conteudo">
     <h1>Flappy Bird</h1>
-    <main tp-flappy>
-        <!-- Jogo 
-         <img src="./imagens/passaro.png" alt="passaro" class="passaro">
 
-         <div class="par-de-barreiras">
+    <!-- Botão centralizado para iniciar o jogo -->
+    <div id="menu" class="menu-centralizado">
+        <button id="btnStart">Iniciar</button>
+    </div>
 
-            <div class="barreira">
-                <div class="corpo"></div>
-                <div class="borda"></div>
-            </div>
+    <!-- Controle de música -->
+    <div id="musicControl" class="music-control">
+        <button id="btnMusic">
+            <i class="bi bi-volume-up-fill" alt="Ativar Música" style="font-size: 30px; color: #fff;"></i> 
+        </button>
+    </div>
 
-            <div class="barreira">
-                <div class="borda"></div>
-                <div class="corpo"></div>
-            </div>
-
-         </div>
-
-         <div class="progresso">100</div>-->
+    <!-- Área onde o jogo será renderizado -->
+    <main tp-flappy class="game-area" style="display: none;">
+        <!-- O jogo será renderizado aqui -->
     </main>
+
+    <!-- Mensagem de Game Over -->
+    <div id="gameOver" class="menu-centralizado" style="display: none;">
+        <h2>Game Over</h2>
+        <p id="pontuacao"></p>
+        <button id="btnRestart">Reiniciar</button>
+    </div>
+
+    <!-- Importando o arquivo JavaScript do jogo -->
     <script src="js/flappy.js"></script>
 </body>
+
 
 </html>

@@ -17,6 +17,133 @@ body {
     min-height: 100%;
 }
 
+/*controlador de musica*/
+.music-control {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.music-control button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.music-control img {
+    width: 40px;
+    height: 40px;
+}
+
+/* botão*/
+.menu-centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameOver {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+#gameOver h2, #gameOver p, #gameOver button {
+    margin: 10px;
+}
+
+h2 {
+    font-size: 100px;
+}
+
+p {
+    font-size: 50px;
+}
+
+#btnStart, #btnRestart {
+    padding: 20px 40px;
+    font-size: 24px;
+    cursor: pointer;
+    color:white;
+    font-family:Helvetica, sans-serif;
+    font-weight:bold;
+    font-size:36px;
+    text-align: center;
+    text-decoration:none;
+    background-color:#FFA12B;
+    display:block;
+    position:relative;
+    padding:20px 40px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+    
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#btnStart:active, #btnRestart:active{
+    top:10px;
+    background-color:#F78900;
+    
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+    box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+  }
+
+#btnStart:after{
+    content:"";
+    height:100%;
+    width:100%;
+    padding:4px;
+    position: absolute;
+    bottom:-15px;
+    left:-4px;
+    z-index:-1;
+    background-color:#2B1800;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+.game-area {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.progresso {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: Pixel;
+    font-size: 70px;
+    z-index: 100;
+}
+
 /* Estilo do Game */
 
 *{
@@ -38,10 +165,10 @@ body {
 }
 
 .passaro {
-    position: relative;
+    position: absolute;
     width: 60px;
     left: calc(50% - 30px);
-    top: 50%;
+ 
 }
 
 .par-de-barreiras {
@@ -80,4 +207,5 @@ body {
     right: 10px;
     font-family: Pixel;
     font-size: 70px;
+    z-index: 100;
 }
